@@ -23,30 +23,30 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 
 	2a. Link Tomboy Notes' or Gnote's actual note folder as a folder named 'notes' to main folder. If you do this.
 
-For Gnote this will be ` ~/.local/share/gnote `
-For Tomboy this will be ` ~/.local/share/tomboy `
+	For Gnote this will be ` ~/.local/share/gnote `
+	For Tomboy this will be ` ~/.local/share/tomboy `
 
-```bash
-$ cd /path/to/noted
-$ ln -s ~/.local/share/gnote notes
-```
+	```bash
+	$ cd /path/to/noted
+	$ ln -s ~/.local/share/gnote notes
+	```
 
 	2b. Open "assets/noted.php" in your favorite text editor and alter the $APP_PATH setting on line 04 from "notes" to "/home/YOUR_USER_NAME/.local/share/gnote" (or tomboy, respectively).
 
 3. Make certain that www-data is a member of the YOUR_USERNAME group, and then check your work by executing:
-
-```bash
-$ usermod -a -G YOUR_USERNAME www-data
-$ groups www-data
+	
+	```bash
+	$ usermod -a -G YOUR_USERNAME www-data
+	$ groups www-data
 ```
 
 4. Make certain that 750 permissions are set on  ` ~./.local`  ` ~./.local/share` and ` ./.local/share/gnote`
  
-```bash
-$ chmod 750 ~./.local
-$ chmod 750 ~./.local/share
-$ chmod 750 ~./.local/share/gnote -R
-```
+	```bash
+	$ chmod 750 ~./.local
+	$ chmod 750 ~./.local/share
+	$ chmod 750 ~./.local/share/gnote -R
+	```
 5. Set optional variables in assets/noted.php
 
 	a. set auth to true (and follow further instructions in that file) if you want to secure your Noted Web App
@@ -61,7 +61,6 @@ Scripts used for inspiration and/or copypasta:
 
 3. http://www.zubrag.com/scripts/
 
-feedback is always welcome.
 ===========================
 
     Copyright (C) 2016 Josh Panter
