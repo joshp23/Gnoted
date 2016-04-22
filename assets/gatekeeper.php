@@ -59,7 +59,6 @@ function showLoginPasswordProtect($error_msg) {
 				<?php if (USE_USERNAME) echo 'Login:<br /><input type="input" name="access_login" /><br />Password:<br />'; ?>
    			 	<input type="password" name="access_password" /><p></p><input type="submit" name="Submit" value="Submit" />
   			</form>
-  			<br />
   			<a style="font-size:9px; color: #B0B0B0; font-family: Verdana, Arial;" href="https://unfettered.net" title="Unfettered">Unfettered</a>
   		</div>
 	</body>
