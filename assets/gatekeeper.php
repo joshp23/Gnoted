@@ -52,7 +52,8 @@ function showLoginPasswordProtect($error_msg) {
   		</style>
   		<div style="width:500px; margin-left:auto; margin-right:auto; text-align:center">
   			<form method="post">
-    			<h2>Welcome to Noted</h2>
+    			<h2>Welcome to Noted!</h2>
+    			<img style="display:block;margin:0 auto;" src="assets/256x256_noted.png">
     			<h5>Please log in to continue</h5>
     			<font color="red"><?php echo $error_msg; ?></font><br />
 				<?php if (USE_USERNAME) echo 'Login:<br /><input type="input" name="access_login" /><br />Password:<br />'; ?>
