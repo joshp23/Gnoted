@@ -53,9 +53,12 @@ $ chmod 750 ~./.local/share/gnote -R
 	b. add a personal greeting
 
 ###CREDITS
-Scripts used for inspiration and/or copypasta: 
+Scripts used for inspiration and/or copypasta:
+
 1. https://wiki.gnome.org/Apps/Tomboy/UsageIdeas
+
 2. https://github.com/gojigeje/tomboy-php
+
 3. http://www.zubrag.com/scripts/
 
 feedback is always welcome.
