@@ -1,4 +1,4 @@
-Noted
+Gnoted
 ======
 by Josh Panter: http://unfettered.net
 
@@ -17,9 +17,9 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 
 ###SETUP - this setup assumes that your webserver is apache
 
-1. Copy the Noted main folder (this repository) to your web server. See the provided alias example (noted.conf) to put this in the web path.
+1. Copy the Gnoted main folder (this repository) to your web server. See the provided alias example (gnoted.conf) to put this in the web path.
 
-2. Get Gnote/Tomboy noted into the path of Noted. There are two ways to do this.
+2. Get Gnote/Tomboy noted into the path of Gnoted. There are two ways to do this.
 
 	2a. Link Tomboy Notes' or Gnote's actual note folder as a folder named 'notes' to main folder. If you do this.
 
@@ -27,11 +27,11 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 	For Tomboy this will be ` ~/.local/share/tomboy `
 
 	```bash
-	$ cd /path/to/noted
+	$ cd /path/to/gnoted
 	$ ln -s ~/.local/share/gnote notes
 	```
 
-	2b. Open "assets/noted.php" in your favorite text editor and alter the $APP_PATH setting on line 04 from "notes" to "/home/YOUR_USER_NAME/.local/share/gnote" (or tomboy, respectively).
+	2b. Open "assets/gnoted.php" in your favorite text editor and alter the $APP_PATH setting on line 04 from "notes" to "/home/YOUR_USER_NAME/.local/share/gnote" (or tomboy, respectively).
 
 3. Make certain that www-data is a member of the YOUR_USERNAME group, and then check your work by executing:
 	
@@ -47,9 +47,9 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 	$ chmod 750 ~./.local/share
 	$ chmod 750 ~./.local/share/gnote -R
 	```
-5. Set optional variables in assets/noted.php
+5. Set optional variables in assets/gnoted.php
 
-	a. set auth to true (and follow further instructions in that file) if you want to secure your Noted Web App
+	a. set auth to true (and follow further instructions in that file) if you want to secure your Gnoted Web App
 	b. add a personal greeting
 
 ###CREDITS
