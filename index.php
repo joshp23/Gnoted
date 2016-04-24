@@ -1,5 +1,5 @@
 <?php
-include ("assets/noted.php");
+include ("assets/gnoted.php");
 if ($require_auth == "true") {
 require ("assets/gatekeeper.php");
   }
@@ -16,7 +16,7 @@ if ($_REQUEST["note"] == "") {
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/note.png">
 
-    <title>Noted</title>
+    <title>Gnoted</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css" rel="stylesheet" integrity="sha384-/x/+iIbAU4qS3UecK7KIjLZdUilKKCjUFVdwFx8ba7S/WvxbrYeQuKEt0n/HWqTx" crossorigin="anonymous">
@@ -35,7 +35,7 @@ if ($_REQUEST["note"] == "") {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href=".">Noted</a>
+          <a class="navbar-brand" href=".">Gnoted/a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -71,8 +71,8 @@ if ($_REQUEST["note"] == "") {
 
           <?php if ($_REQUEST["note"] == ""): ?>
              <div class="jumbotron">
-               <h2 style="text-decoration: underline;">Noted</h2>
-               <p>Welcome to Noted, the secure, web based note reader for Gnote and Tomboy desktop notes.</p>
+               <h2 style="text-decoration: underline;">Gnoted</h2>
+               <p>Welcome to Gnoted, the secure, web based note reader for Gnote and Tomboy desktop notes.</p>
                <p>To get started, simply click on the title of a Note on the left to display its contents.</p>
              </div>
           <?php else:
@@ -95,7 +95,7 @@ if ($_REQUEST["note"] == "") {
       <hr>
 
       <footer>
-        <p>&copy; 2016 <a target="_blank" href="//unfettered.net">Unfettered</a></p>
+        <p>&copy; 2016 <a target="_blank" href="http://unfettered.net">Unfettered</a></p>
       </footer>
 
     </div><!--/.container-->
