@@ -35,7 +35,7 @@ if ($_REQUEST["note"] == "") {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href=".">Gnoted/a>
+          <a class="navbar-brand" href=".">Gnoted</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
