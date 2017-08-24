@@ -6,13 +6,12 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 
 ###TODO (in almost no particular order): 
 
-1. Move all config variables to a single file
-2. Add arbitrary note sharing via url with/without auth
-3. Add YOURLS support for above feature
-4. Add honeypot options (see project honeypot https://www.projecthoneypot.org/)
-5. Add notebooks
-6. Add ability to sort notes via name and date of creation and/or last edit
-7. Exclude template files
+1. Add arbitrary note sharing via url with/without auth
+2. Add YOURLS support for above feature
+3. Add honeypot options (see project honeypot https://www.projecthoneypot.org/)
+4. Add notebooks
+5. Add ability to sort notes via name and date of creation and/or last edit
+6. Exclude template files
 
 ###SETUP - this setup assumes that your webserver is apache
 
