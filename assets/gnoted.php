@@ -1,10 +1,5 @@
 <?php
-### OPTIONS
-$require_auth = "true"; // if true, set additional options in gatekeeper.php
-$APP_PATH = "notes";
-$GREETING = "Unfettered Notes";
 
-### FUNTIONS
 function resolveInternalLinks($notes, $text) {
   $links = array();
   foreach($notes as $note) {
