@@ -1,9 +1,9 @@
 <?php
-include ("assets/gnoted.php");
+require ("assets/gnoted.php");
 if ($require_auth == "true") {
 require ("assets/gatekeeper.php");
   }
-if ($_REQUEST["note"] == "") {
+if(isset($_REQUEST["note"]) && $_REQUEST["note"] == "") {
    $active = "active";
   }
 ?>
@@ -69,7 +69,7 @@ if ($_REQUEST["note"] == "") {
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle List</button>
           </p>
 
-          <?php if ($_REQUEST["note"] == ""): ?>
+          <?php if(isset($_REQUEST["note"]) && $_REQUEST["note"] == ""): ?>
              <div class="jumbotron">
                <h2 style="text-decoration: underline;">Gnoted</h2>
                <p>Welcome to Gnoted, the secure, web based note reader for Gnote and Tomboy desktop notes.</p>
@@ -77,12 +77,14 @@ if ($_REQUEST["note"] == "") {
              </div>
           <?php else:
             $notes = getNotes();
-            $note = $notes[$_REQUEST["note"]];
-            $note["content"] = getNote($note["id"], $note["rev"], true); ?>
+            if(isset($_REQUEST["note"]) && $_REQUEST["note"] !== null) {
+		$note = $notes[$_REQUEST["note"]];
+            	$note["content"] = getNote($note["id"], $note["rev"], true);
+	    } ?>
 
             <div class="row">
                <div class="well col-12">
-                  <?php echo $note["content"]["text"];?>
+                  <?php if(isset($_REQUEST["note"]) && $_REQUEST["note"] !== null) echo $note["content"]["text"];?>
                </div>
             </div><!--/row-->
 
@@ -95,7 +97,7 @@ if ($_REQUEST["note"] == "") {
       <hr>
 
       <footer>
-        <p>&copy; 2016 <a target="_blank" href="http://unfettered.net">Unfettered</a></p>
+        <p>&copy; 2017 <a target="_blank" href="http://unfettered.net">Unfettered</a></p>
       </footer>
 
     </div><!--/.container-->
