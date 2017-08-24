@@ -17,9 +17,7 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 
 1. Copy the Gnoted main folder (this repository) to your web server. See the provided alias example (gnoted.conf) to put this in the web path.
 
-2. Get Gnote/Tomboy noted into the path of Gnoted. There are two ways to do this.
-
-	2a. Link Tomboy Notes' or Gnote's actual note folder as a folder named 'notes' to main folder. If you do this.
+2. Link Tomboy Notes' or Gnote's note folder.
 
 	For Gnote this will be ` ~/.local/share/gnote `
 	For Tomboy this will be ` ~/.local/share/tomboy `
@@ -29,9 +27,10 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 	$ ln -s ~/.local/share/gnote notes
 	```
 
-	2b. Open "assets/gnoted.php" in your favorite text editor and alter the $APP_PATH setting on line 04 from "notes" to "/home/YOUR_USER_NAME/.local/share/gnote" (or tomboy, respectively).
+3. Review "config.php" 
+	- you can alter the $APP_PATH setting from "notes" to "/home/YOUR_USER_NAME/.local/share/gnote" (or tomboy, respectively).
 
-3. Make certain that www-data is a member of the YOUR_USERNAME group, and then check your work by executing:
+4. Make certain that www-data is a member of the YOUR_USERNAME group, and then check your work by executing:
 	
 	```bash
 	$ usermod -a -G YOUR_USERNAME www-data
@@ -45,10 +44,6 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 	$ chmod 750 ~./.local/share
 	$ chmod 750 ~./.local/share/gnote -R
 	```
-5. Set optional variables in assets/gnoted.php
-
-	a. set auth to true (and follow further instructions in that file) if you want to secure your Gnoted Web App
-	b. add a personal greeting
 
 ###CREDITS
 Scripts used for inspiration and/or copypasta:
