@@ -37,7 +37,7 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 	```bash
 	$ usermod -a -G YOUR_USERNAME www-data
 	$ groups www-data
-```
+	```
 
 4. Make certain that 750 permissions are set on  ` ~./.local`  ` ~./.local/share` and ` ./.local/share/gnote`
  
