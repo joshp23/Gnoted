@@ -1,8 +1,7 @@
 <?php
+require ("config.php");
 require ("assets/gnoted.php");
-if ($require_auth == "true") {
-require ("assets/gatekeeper.php");
-  }
+
 if(isset($_REQUEST["note"]) && $_REQUEST["note"] == "") {
    $active = "active";
   }
@@ -44,9 +43,11 @@ if(isset($_REQUEST["note"]) && $_REQUEST["note"] == "") {
             <li><a target="_blank" href="//wiki.gnome.org/Apps/Gnote/">Gnote</a></li>
             <li><a target="_blank" href="//wiki.gnome.org/Apps/Tomboy/">Tomboy Notes</a></li>
           </ul>
+	  <?php if ($require_auth == true) echo '
 	   <ul class="nav navbar-nav navbar-right">
             <li><a href="?logout=1">Logout</a></li>
-          </ul>
+          </ul>';
+	  ?>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -69,7 +70,7 @@ if(isset($_REQUEST["note"]) && $_REQUEST["note"] == "") {
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle List</button>
           </p>
 
-          <?php if(isset($_REQUEST["note"]) && $_REQUEST["note"] == ""): ?>
+          <?php if(!isset($_REQUEST["note"]) ): ?>
              <div class="jumbotron">
                <h2 style="text-decoration: underline;">Gnoted</h2>
                <p>Welcome to Gnoted, the secure, web based note reader for Gnote and Tomboy desktop notes.</p>
