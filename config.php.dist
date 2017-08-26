@@ -1,4 +1,5 @@
 <?php
+if( !defined( 'GNOTED_PRONK' ) ) die();
 
 $APP_PATH = "/path/to/your/notes/";
 /* select one of the following bootswatch themes:
