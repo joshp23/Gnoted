@@ -1,43 +1,43 @@
 Gnoted
 ======
-by Josh Panter: http://unfettered.net
-
 A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 
-###TODO (in almost no particular order): 
+### Features
+- Easily switch between Bootstrap [Bootswatch](https://bootswatch.com/) themes
+- Sort Notes by Notebook or view full list
+- Optional password protection: single user or give others access
 
-1. Add arbitrary note sharing via url with/without auth
-2. Add YOURLS support for above feature
-3. Add honeypot options (see project honeypot https://www.projecthoneypot.org/)
-4. Add notebooks
-5. Add ability to sort notes via name and date of creation and/or last edit
-6. Exclude template files
+### TODO (in no particular order): 
+- Add arbitrary note sharing via url with/without auth
+- Add YOURLS support for above feature
+- Add honeypot options (see project honeypot https://www.projecthoneypot.org/)
 
-###SETUP - this setup assumes that your webserver is apache
+### SETUP
 
-1. Copy the Gnoted main folder (this repository) to your web server. See the provided alias example (gnoted.conf) to put this in the web path.
+1. Copy the Gnoted main folder (this repository) to your web server. See the provided Apache2 alias example.
+2. Rename "config.php.dist" to "config.php" and set the values, if necessary 
+3. Connect Tomboy Notes' or Gnote's note folder:  
+	a. Symlink:
 
-2. Link Tomboy Notes' or Gnote's note folder.
+		For Gnote this will be ` ~/.local/share/gnote `
+		For Tomboy this will be ` ~/.local/share/tomboy `
 
-	For Gnote this will be ` ~/.local/share/gnote `
-	For Tomboy this will be ` ~/.local/share/tomboy `
+		```bash
+		$ cd /path/to/gnoted
+		$ ln -s ~/.local/share/gnote notes
+		```
 
-	```bash
-	$ cd /path/to/gnoted
-	$ ln -s ~/.local/share/gnote notes
-	```
+	b. Alter the $APP_PATH setting from "notes" to "/home/YOUR_USER_NAME/.local/share/gnote" (or tomboy, respectively).
 
-3. Review "config.php" 
-	- you can alter the $APP_PATH setting from "notes" to "/home/YOUR_USER_NAME/.local/share/gnote" (or tomboy, respectively).
-
-4. Make certain that www-data is a member of the YOUR_USERNAME group, and then check your work by executing:
+4. Set permissions  
+	a. Make certain that www-data is a member of the YOUR_USERNAME group, and then check your work by executing:
 	
 	```bash
 	$ usermod -a -G YOUR_USERNAME www-data
 	$ groups www-data
 	```
 
-4. Make certain that 750 permissions are set on  ` ~./.local`  ` ~./.local/share` and ` ./.local/share/gnote`
+	b. Make certain that 750 permissions are set on  ` ~./.local`  ` ~./.local/share` and ` ./.local/share/gnote`
  
 	```bash
 	$ chmod 750 ~./.local
@@ -45,7 +45,7 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 	$ chmod 750 ~./.local/share/gnote -R
 	```
 
-###CREDITS
+### CREDITS
 Scripts used for inspiration and/or copypasta:
 
 1. https://wiki.gnome.org/Apps/Tomboy/UsageIdeas
