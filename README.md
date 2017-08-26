@@ -7,11 +7,6 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 - Sort Notes by Notebook or view full list
 - Optional password protection: single user or give others access
 
-### TODO (in no particular order): 
-- Add arbitrary note sharing via url with/without auth
-- Add YOURLS support for above feature
-- Add honeypot options (see project honeypot https://www.projecthoneypot.org/)
-
 ### SETUP
 
 1. Copy the Gnoted main folder (this repository) to your web server. See the provided Apache2 alias example.
@@ -19,13 +14,13 @@ A secure PHP based Web App for reading either Gnote or Tomboy Notes.
 3. Connect Tomboy Notes' or Gnote's note folder:  
 	a. Symlink:
 
-		For Gnote this will be ` ~/.local/share/gnote `
-		For Tomboy this will be ` ~/.local/share/tomboy `
+	For Gnote this will be ` ~/.local/share/gnote `  
+	For Tomboy this will be ` ~/.local/share/tomboy `
 
-		```bash
-		$ cd /path/to/gnoted
-		$ ln -s ~/.local/share/gnote notes
-		```
+	```bash
+	$ cd /path/to/gnoted
+	$ ln -s ~/.local/share/gnote notes
+	```
 
 	b. Alter the $APP_PATH setting from "notes" to "/home/YOUR_USER_NAME/.local/share/gnote" (or tomboy, respectively).
 
