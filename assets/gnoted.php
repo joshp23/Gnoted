@@ -1,4 +1,5 @@
 <?php
+if( !defined( 'GNOTED_PRONK' ) ) die();
 
 $notes = getNotes();
 function getNotes() {
