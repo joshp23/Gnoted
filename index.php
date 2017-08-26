@@ -1,4 +1,6 @@
 <?php
+define('GNOTED_PRONK', true);
+// https://www.youtube.com/watch?v=Jis_CrJ4zUI
 require ("config.php");
 require ("assets/gnoted.php");
 if ($require_auth == true) require ("assets/gatekeeper.php");
