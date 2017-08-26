@@ -1,4 +1,6 @@
 <?php
+if( !defined( 'GNOTED_PRONK' ) ) die();
+
 session_start();
 
 // Convert timeout to seconds
