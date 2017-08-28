@@ -1,7 +1,7 @@
 <?php
 if( !defined( 'GNOTED_PRONK' ) ) die();
 
-$APP_PATH = "/path/to/your/notes/";
+$APP_PATH = "notes";
 /* select one of the following bootswatch themes:
 *  preview at https://bootswatch.com/
 *
